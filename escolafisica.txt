@@ -1,0 +1,29 @@
+create database escola;
+
+use escola;
+
+create table Aluno ( matricula int primary key auto_increment, nome varchar(80) not null, nascimento date, cpf char(14) not null unique, responsavel varchar(80) not null, email varchar(80) unique);
+
+insert into aluno values ( null, 'José Bezerra', '2007-04-30', '197.654.987.95', 'Hudson Bezerra', 'voltacinderela@hotmail.com' );
+
+create table Disciplina (cod_disciplina int primary key auto_increment, nome varchar(30) not null);create table Disciplina (cod_disciplina int primary key auto_increment, nome varchar(30) not null);
+
+mysql> create table estuda ( idEstuda int primary key auto_increment,fk_aluno_matricula int not null, fk_turma_numero int not null );
+
+ alter table estuda add constraint fkmat foreign key (fk_aluno_matricula) references aluno (matricula);
+
+alter table estuda add constraint fkturn foreign key (fk_turma_numero) references turma (numero);
+
+create table possui ( id_pussui int primary key auto_increment, fk_Disciplina_cod_disciplina int not null, fk_turma_numero int not null );
+
+alter table possui add constraint fkdiscip foreign key (fk_Disciplina_cod_disciplina) references disciplina (cod_disciplina);
+
+alter table possui add constraint fktuma foreign key (fk_turma_numero) references turma (numero);
+
+ create table professor (matricula int primary key auto_increment, nome varchar(80) not null, formacao varchar(30)not null);
+
+create table leciona (id_leciona int primary key auto_increment, fk_disciplina_cod_disciplina int not null, fk_professor_matricula int not null);
+
+ alter table leciona add constraint fkprma foreign key (fk_professor_matricula) references professor (matricula);
+
+ alter table leciona add constraint fkdisp foreign key (fk_disciplina_cod_disciplina ) references disciplina (cod_disciplina);
