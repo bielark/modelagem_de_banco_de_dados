@@ -27,3 +27,44 @@ create table leciona (id_leciona int primary key auto_increment, fk_disciplina_c
  alter table leciona add constraint fkprma foreign key (fk_professor_matricula) references professor (matricula);
 
  alter table leciona add constraint fkdisp foreign key (fk_disciplina_cod_disciplina ) references disciplina (cod_disciplina);
+
+insert into aluno values ( null, 'José Bezerra', '2007-04-30', '197.654.987.95', 'Hudson Bezerra', 'voltacinderela@hotmail.com' );
+
+insert into aluno values ( null, 'Ana carolina', '2006-06-05', '87.984.552.65', 'Gustavo Bezerra', 'gustavo045@hotmail.com' );
+
+insert into aluno (matricula, nome, nascimento, cpf, responsavel, email) values (null, 'felipe braga', '1996-03-02','123.456.789.91','mateus braga', 'tes@email.com');
+
+insert into aluno (matricula, nome, nascimento, cpf, responsavel, email) values (null, 'Elias Shaema', '1995-03-02','123.456.789.01','jonh sherman', 'es@email.com');
+
+insert into turma values (2023080, 'm','tecnico de informatica');
+
+ insert into turma values (2023090, 't','tecnico de comunicaçao visual');
+
+insert into estuda values (7501, 1, 2023090);
+
+ insert into estuda values (7502, 3, 2023080);
+use estacionamento
+insert into estuda values (null, 2, 2023080);
+
+insert into estuda values (null, 4, 2023090);
+
+
+professores exercicios
+
+insert into professor values (1, 'sergio', 'programação');
+
+insert into professor values (null, 'vicente', 'redes');
+
+ insert into professor values (null, 'flavia', 'tratamento de imagem');
+
+insert into disciplina values (5,'ti');
+
+insert into disciplina values (6,'multimidia');
+
+insert into disciplina values (4,'rede');
+
+insert into possui values(341,5,2023080);
+
+mysql> insert into possui values(null,4,2023080);
+
+mysql> insert into possui values(null,6,2023090);

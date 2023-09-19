@@ -9,3 +9,21 @@ alter table cadastro_veicular add cor varchar(15) not null unique after modelo;
 alter table cadastro_veicular modify cor char(8) not null unique;
 
 alter table Veículo change fabricante marca varchar(80) not null;
+
+insert into carro values (null,'vw','gol', 'abc1234');
+
+insert into carro values (null,'fiat','marea', 'abc1254');
+
+insert into carro values (null,'ford','ka', 'abc4254');
+
+ insert into carro values (null,'toyota','corolla', 'abj4254');
+
+insert into carro values (null,'honda','civic', 'obj4254');
+
+update carro set nome_modelo ='ka sedan' where idVeiculo = 3;
+
+update carro set fabricante ='volkswagem'where idVeiculo  = 1;
+
+delete from carro where idVeiculo =2;
+
+ select * from carro where placa ='obj4254';
