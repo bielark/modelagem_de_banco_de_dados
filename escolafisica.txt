@@ -59,6 +59,8 @@ insert into professor values (null, 'vicente', 'redes');
 
 insert into disciplina values (5,'ti');
 
+insert into disciplina values(9,'logica de programação');
+
 insert into disciplina values (6,'multimidia');
 
 insert into disciplina values (4,'rede');
@@ -68,3 +70,33 @@ insert into possui values(341,5,2023080);
 mysql> insert into possui values(null,4,2023080);
 
 mysql> insert into possui values(null,6,2023090);
+
+exercicio de fixaçao
+
+insert into disciplina values(9,'logica de programação');
+
+insert into professor values (4,'jofferson brandão', 'ti');
+
+insert into leciona values( null, 9, 4);
+
+update professor set nome = 'vincete orsino' where matricula = 2;
+
+insert into aluno values( null,'gustavo cavalo' , '1996-03-02','123.456.789.96','felipe', 'eltes@email.com');
+
+alter table professor add email varchar(80)not null after nome;
+
+update professor set email = 'sergio@gmail.com' where matricula = 1;
+
+update professor set email = 'vinc@gmail.com' where matricula = 2;
+
+update professor set email = 'fla@gmail.com' where matricula = 3;
+
+update professor set email = 'foff@gmail.com' where matricula = 4;
+
+ insert into turma valus(2023100,'m','tec.comun.visual')
+
+insert into aluno values(null,'judite presley','2006-06-05','87.984.552.60','Gustavo Bezerra', 'gust@gmail.com');
+
+insert into estuda values(null,6,2023100 );
+
+insert into possui values(null , 6, 2023100);
