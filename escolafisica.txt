@@ -102,3 +102,21 @@ insert into estuda values(null,6,2023100 );
 insert into possui values(null , 6, 2023100);
 
 update disciplina set nome ='programação python'where cod_disciplina = 5;
+
+
+exercicio de professor na explicaçao
+
+alter table professor add dependentes int;
+
+update professor set dependentes ='3'where matricula =1;
+
+update professor set dependentes ='0'where matricula =2;
+
+ update professor set dependentes ='2'where matricula =4;
+
+select aluno.nome, turma.definicao, turma.turno from aluno, turma, estuda where aluno.matricula = estuda.fk_aluno_matricula and fk_turma_numero = turma.numero and aluno.matricula = 3001;
+
+ 
+select aluno.nome, turma.definicao, turma.turno from aluno, turma, estuda where aluno.matricula = estuda.fk_aluno_matricula and fk_turma_numero = turma.numero order by aluno.nome;
+
+select aluno.nome, disciplina.nome from aluno, estuda, turma, possui, disciplina where aluno.matricula = estuda.fk_aluno_matricula and estuda.fk_turma_numero = turma.numero and turma.numero = possui.fk_turma_numero and possui.fk_disciplina_cod_disciplina = disciplina.cod_disciplina;
