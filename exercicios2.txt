@@ -2,7 +2,7 @@ exercicio de bd
 
 1 select aluno.nome, aluno.email from aluno where email is not null;
 
-2 select nome from professor where formacao = 'ti';
+2 select nome from professor where formacao = 'ti' order by;
 
 3 select * from aluno where matricula between 4 and 8;
 
@@ -10,7 +10,12 @@ exercicio de bd
 
 5  select disciplina.nome from disciplina, possui where cod_disciplina = fk_Disciplina_cod_disciplina and fk_Turma_numero = 2023080;
 
+select disciplina.nome from turma ,possui, disciplina where turma.numero = possui.fk_turma_numero and possui.fk_disciplina_cod_disciplina = disciplina.cod_disciplina and turma and  
+
+
 6  select count(definicao) from turma where definicao = 'Técnico de Informática';
+
+select count(definicao) as 'total turmas ti' from turma where definicao = 'Técnico de Informática';
 
 7 select nome from aluno where year(nascimento) = 2006;
 
